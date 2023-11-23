@@ -1,0 +1,21 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        "config:base",
+        ":semanticCommits",
+        ":semanticCommitTypeAll(chore)"
+    ],
+    "platformAutomerge": true,
+    "automerge": true,
+    "automergeStrategy": "squash",
+    "lockFileMaintenance": {
+        "enabled": true,
+        "automerge": true
+    },
+    "packageRules": [
+        {
+          "matchPackagePatterns": ["async-graphql", "async-graphql-axum"],
+          "groupName": "async-graphql"
+        }
+    ]
+}
